@@ -784,8 +784,8 @@ function applyTheme(theme){
 function getInitialTheme(){
   const saved = localStorage.getItem("theme");
   if (saved && THEMES[saved]) return saved;
-  if (localStorage.getItem("dark") === "true") return "noir";
-  return "classic";
+  if (localStorage.getItem("dark") === "false") return "classic";
+  return "noir";
 }
 
 function formatVND(n){
@@ -906,12 +906,12 @@ setBookingAndQR();
 initPriceCalculator();
 syncFooterLogo();
 applyLang(getInitialLang());
-if (
-  localStorage.getItem("dark") === "true" ||
-  localStorage.getItem("theme") === "noir" ||
-  localStorage.getItem("theme") === "neon"
-){
-  toggleDark();
+applyTheme(getInitialTheme());
+const initialDarkToggle = document.getElementById("dark-toggle");
+if (initialDarkToggle){
+  const isDark = document.body.classList.contains("dark");
+  initialDarkToggle.textContent = isDark ? "Light" : "Dark";
+  initialDarkToggle.setAttribute("aria-pressed", String(isDark));
 }
 
 
