@@ -59,7 +59,7 @@ body{
   content:"";
   position:absolute;
   inset:-20%;
-  background-image: url("maze.webp");
+  background-image: url("maze-background.webp");
   background-repeat: repeat;
   background-size: 360px 360px;
   opacity: .10;
