@@ -1,323 +1,243 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Nha Trang Escape Room by CRYPT-TIC â€¢ Nha Trang</title>
-  <meta name="description" content="Escape room in Nha Trang. Book a time, pay deposit, and play in 60 minutes."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261017-maze"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Nha Trang Escape Room by CRYPT-TIC â€¢ Nha Trang</title>
+<meta content="Escape room in Nha Trang. Book a time, pay deposit, and play in 60 minutes." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="styles.css?v=20261021-clean" rel="stylesheet"/>
+<link href="styles.css?v=20261017-maze" rel="stylesheet"/>
 </head>
 <body class="dark" data-theme="noir">
-  <div class="bg" aria-hidden="true"></div>
+<div aria-hidden="true" class="bg"></div>
+<header class="topbar">
+<div class="wrap topbar-inner">
+<div class="brand">
+<img alt="CRYPT-TIC logo" class="logo" src="signnochainlogo.png"/>
+<div class="brand-text">
+<div class="brand-title">Nha Trang Escape Room</div>
+<div class="brand-sub">by CRYPT-TIC</div>
+</div>
+</div>
+<button aria-controls="site-nav" aria-expanded="false" aria-label="Open menu" class="nav-toggle" id="nav-toggle" type="button">☰</button>
+<nav aria-label="Primary navigation" class="nav" id="site-nav">
+<a data-i18n="nav_home" href="#home">Home</a>
+<a data-i18n="nav_pricing" href="#pricing">Pricing</a>
+<a data-i18n="nav_booking" href="#booking">Booking</a>
+<a data-i18n="nav_contact" href="#contact">Contact</a>
+<a data-i18n="nav_location" href="#location">Location</a>
+</nav>
+<div class="lang-and-mode">
+<div class="lang">
+<button class="lang-btn" data-lang="en" type="button">EN</button>
+<button class="lang-btn" data-lang="vi" type="button">VI</button>
+<button class="lang-btn" data-lang="ru" type="button">RU</button>
+<button class="lang-btn" data-lang="ko" type="button">KR</button>
+</div>
+<button aria-label="Toggle dark mode" aria-pressed="false" class="dark-toggle" id="dark-toggle" type="button">Dark</button>
+</div>
+</div>
+</header>
+<main class="wrap">
+<section class="hero" id="home">
+<div class="hero-card">
+<div class="pill" data-i18n="pill">Private bookings â€¢ 60 minutes â€¢ Up to 8 players</div>
+<h1 data-i18n="hero_title">Nha Trang Escape Room</h1>
+<p class="lead" data-i18n="hero_lead">Locked in together, your team searches for clues and solves puzzles to escape within 60 minutes. FUN - FOR ALL AGES AND LANGUAGES! MULTIPLE THEMES AVAILABLE!</p>
+<div class="cta-row">
+<a class="btn primary" data-i18n="cta_book" href="#booking">Book / Ask</a>
+<a class="btn ghost" data-i18n="cta_learn" href="#details">See how it works</a>
+</div>
+<div class="quick">
+<div class="quick-item">
+<div class="quick-label" data-i18n="quick_hours_label">Hours</div>
+<div class="quick-value" data-i18n="quick_hours_value">By appointment â€¢ 10am–10pm daily</div>
+</div>
+<div class="quick-item">
+<div class="quick-label" data-i18n="quick_phone_label">Fast contact</div>
+<div class="quick-actions">
+<a class="chip" data-link="tel" href="#"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"></path></svg><span data-i18n="btn_call">Call</span></a>
+<a class="chip" data-link="facebook" href="#" rel="noopener" target="_blank"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M13.5 21v-7h2.35l.35-2.74H13.5V9.51c0-.79.22-1.33 1.35-1.33h1.45V5.73c-.25-.03-1.1-.1-2.09-.1-2.06 0-3.47 1.26-3.47 3.58v2.05H8.4V14h2.34v7h2.76z"></path></svg><span data-i18n="btn_facebook">Facebook</span></a>
+<a class="chip" data-link="whatsapp" href="#"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 32 32" width="18"><path d="M19.11 17.37c-.27-.14-1.62-.8-1.87-.89-.25-.09-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.54-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.97 2.64 1.11 2.82c.14.18 1.91 2.91 4.63 4.08.65.28 1.16.45 1.55.58.65.21 1.25.18 1.72.11.52-.08 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32z"></path><path d="M26.7 5.3A13.48 13.48 0 0 0 16 1.5C8.54 1.5 2.5 7.54 2.5 15c0 2.38.62 4.7 1.8 6.74L2.5 30.5l9-1.76A13.43 13.43 0 0 0 16 28.5c7.46 0 13.5-6.04 13.5-13.5 0-3.6-1.4-6.98-2.8-9.7zM16 26.3c-2.03 0-4.02-.55-5.76-1.6l-.41-.24-5.34 1.04 1.01-5.2-.27-.43A11.22 11.22 0 0 1 4.8 15C4.8 8.8 9.8 3.8 16 3.8S27.2 8.8 27.2 15 22.2 26.3 16 26.3z"></path></svg><span>WhatsApp</span></a>
+</div>
+</div>
+</div>
+<div class="muted small hint-inline" data-i18n="screenshot_note">After booking, send a screenshot of your payment on Facebook, Zalo, or WhatsApp to approve your time.</div>
+</div>
+<div class="hero-side"><div class="heroMedia">
+<img alt="CRYPT-TIC escape room group photo" src="group-photo.jpg"/>
+</div>
+<div class="panel panel-dark hero-story">
+<h3 data-i18n="side_title">Bring your friends. Beat the clock.</h3>
+<ul class="bullets">
+<li data-i18n="b1">Search the room for hidden clues</li>
+<li data-i18n="b2">Solve puzzles and unlock the next steps</li>
+<li data-i18n="b3">A fully immersive, mentally challenging experience</li>
+</ul>
+<div class="note" data-i18n="side_note">Great for friends, dates, birthdays, work events â€” or a boring Wednesday. Think you can escape? Prove it. Book a slot and beat the room.</div>
+</div>
+</div>
+</section>
+<section class="section" id="details">
+<h2 data-i18n="details_title">How it works</h2>
+<div class="grid-3">
+<div class="card">
+<div class="card-num">01</div>
+<h3 data-i18n="d1_title">Arrive &amp; get briefed</h3>
+<p data-i18n="d1_text">We explain rules, safety, and your mission. Then the timer starts.</p>
+</div>
+<div class="card">
+<div class="card-num">02</div>
+<h3 data-i18n="d2_title">Explore &amp; solve</h3>
+<p data-i18n="d2_text">Find clues, connect patterns, and unlock progress as a team.</p>
+</div>
+<div class="card">
+<div class="card-num">03</div>
+<h3 data-i18n="d3_title">Escape in 60 minutes</h3>
+<p data-i18n="d3_text">Race against time. Communicate. Think fast. Escape.</p>
+</div>
+</div>
+</section>
+<section class="section" id="pricing">
+<h2 data-i18n="pricing_title">Pricing</h2>
+<div class="pricing-layout"><figure class="pricing-art"><img alt="Nha Trang Escape Room pricing: 2 players 1,100,000 VND; 3 players 1,350,000 VND; 4–6 players 350,000 VND per person; 7–8 players 2,100,000 VND total" class="pricing-poster" height="1009" loading="lazy" src="pricing-poster.png" width="720"/></figure><div class="price-card pricing-summary">
+<table class="price-table"><thead><tr><th data-i18n="pricing_players">Players</th><th data-i18n="pricing_each">Per person</th><th data-i18n="pricing_total">Total</th></tr></thead><tbody><tr><td>2</td><td>550,000 VND</td><td>1,100,000 VND</td></tr><tr><td>3</td><td>450,000 VND</td><td>1,350,000 VND</td></tr><tr><td>4</td><td>350,000 VND</td><td>1,400,000 VND</td></tr><tr><td>5</td><td>350,000 VND</td><td>1,750,000 VND</td></tr><tr><td>6</td><td>350,000 VND</td><td>2,100,000 VND</td></tr><tr><td>7</td><td>300,000 VND</td><td>2,100,000 VND</td></tr><tr><td>8</td><td>262,500 VND</td><td>2,100,000 VND</td></tr></tbody></table>
+<p data-i18n="price_deposit">Deposit minimum: 350.000đ to hold any booking</p>
+<p data-i18n="price_hours">Hours: 10:00–22:00 daily (last start 21:00)</p>
+<a class="btn primary full" data-i18n="cta_booknow" href="#" id="book-now">Book now</a>
+</div>
+</div><div class="card facebook-card">
+<div class="facebook-copy">
+<p class="mapEyebrow" data-i18n="fb_eyebrow">Latest on Facebook</p>
+<h3 data-i18n="fb_title">See our newest updates</h3>
+<p class="muted" data-i18n="fb_clean_text">Photos, news, and recent updates from our escape room.</p>
+</div>
+<a class="btn ghost" data-i18n="fb_cta" data-link="facebook" href="https://www.facebook.com/profile.php?id=61588050163602" rel="noopener" target="_blank">Open Facebook</a>
+</div>
+</section>
+<section class="section" id="booking">
+<h2 data-i18n="booking_title">Booking</h2>
+<div class="contact compact">
+<div class="card">
+<h3 data-i18n="booking_calendar_title">Choose a time</h3>
+<p class="muted" data-i18n="booking_calendar_text" style="margin-top:10px">Pick a slot (10:00–22:00). Last start 21:00. Request pending until confirmed.</p>
+<div class="divider" style="margin-top:14px"></div>
+<a class="btn primary full booking-open-top" data-i18n="booking_open" href="#" id="openBookingBtn" rel="noopener" target="_blank">Open booking form</a>
+<div aria-label="Price calculator" class="paycalc" style="margin-top:14px;">
+<div class="paycalc-top">
+<div class="paycalc-title" id="calcTitle">Players &amp; price</div>
+<div class="paycalc-select">
+<label class="sr-only" for="calcPlayers" id="calcPlayersLabel">Players</label>
+<select aria-label="Players" id="calcPlayers"></select>
+</div>
+</div>
+<div class="paycalc-lines">
+<div class="paycalc-line"><span id="calcPrepayLabel">Prepay (VietQR)</span><strong id="calcPrepay">â€”</strong></div>
+<div class="paycalc-line muted"><span id="calcArrivalLabel">Pay on arrival</span><strong id="calcArrival">â€”</strong></div>
+<div class="paycalc-line"><span id="calcDepositLabel">Deposit only</span><strong id="calcDeposit">â€”</strong></div>
+</div>
+<div class="muted small" id="calcNote">Minimum charge applies (4 players). VietQR prepay is cheaper.</div>
+</div>
+<!-- Duplicate booking CTA removed: keep only the TOP Open booking form button -->
+</div>
+<div class="card">
+<h3 data-i18n="booking_deposit_title">Deposit (VietQR)</h3>
+<p class="muted" data-i18n="booking_deposit_text">Minimum deposit 350.000Ä‘ (~$14) to hold. Full prepay optional.</p>
+<div class="paycard">
+<div class="paycard-head">
+<div aria-hidden="true" class="paycard-logos">
+<span class="logo-chip vietqr">VietQR</span>
+<span class="logo-chip vietpay">VietPay</span>
+</div>
+<div class="paycard-note" data-i18n="pay_note">Open your banking app â†’ Scan to pay</div>
+</div>
+<div class="paycard-body">
+<div class="paycard-qr">
+<img alt="VietQR payment QR" class="qr-code" id="vietqr" loading="lazy" src=""/>
+</div>
+<div class="paycard-info">
+<div class="payrow">
+<div class="k" data-i18n="pay_name_label">Name</div>
+<div class="v">Nha Trang Escape Room</div>
+</div>
+<div class="payrow">
+<div class="k" data-i18n="pay_account_label">Account</div>
+<div class="v">1064551196</div>
+<button aria-label="Copy account" class="copy" data-copy="1064551196" data-i18n="copy_btn" type="button">Copy</button>
+</div>
+<a class="btn ghost full" data-i18n="booking_open_vietqr" href="#" id="open-vietqr" rel="noopener" target="_blank">Open VietQR</a>
+<a class="btn ghost full" data-i18n="pay_card" href="#" id="pay-card" rel="noopener" target="_blank">Pay by card (PayPal)</a>
+<div class="muted small" data-i18n="pay_tip">Tip: after paying, send a screenshot on Facebook, Zalo, or WhatsApp so we can approve your booking.</div>
+</div>
+</div>
+</div>
+<ul class="checklist">
+<li data-i18n="booking_step1">Scan QR â†’ pay deposit</li>
+<li data-i18n="booking_step2">Send screenshot (Facebook/Zalo/WhatsApp)</li>
+<li data-i18n="booking_step3">We confirm your time</li>
+</ul>
+<div class="muted small" data-i18n="booking_email_note">Optional: add email in the booking form to receive approval updates.</div>
+</div>
+</div>
+</section>
+<section class="section" id="contact">
+<h2 data-i18n="contact_title">Contact</h2>
+<div class="contact compact">
+<div class="card">
+<h3 data-i18n="contact_book">Contact &amp; reservations</h3>
+<p class="muted" data-i18n="contact_text">Message on Facebook or call/text to reserve. After paying deposit, send a screenshot to confirm.</p>
+<div class="social-buttons">
+<a class="chip big" data-link="facebook" href="#" rel="noopener" target="_blank"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M13.5 21v-7h2.35l.35-2.74H13.5V9.51c0-.79.22-1.33 1.35-1.33h1.45V5.73c-.25-.03-1.1-.1-2.09-.1-2.06 0-3.47 1.26-3.47 3.58v2.05H8.4V14h2.34v7h2.76z"></path></svg><span data-i18n="btn_facebook">Facebook</span></a>
+<a class="chip big" data-link="tel" href="#"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"></path></svg><span data-i18n="btn_call">Call</span></a>
+<a class="chip big" data-link="sms" href="#"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M4 4h16a2 2 0 0 1 2 2v13a1 1 0 0 1-1 1H7l-4 3V6a2 2 0 0 1 2-2zm2 5h12v2H6V9zm0 4h9v2H6v-2z"></path></svg><span data-i18n="btn_text">Text</span></a>
+<a class="chip big" data-link="whatsapp" href="#"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 32 32" width="18"><path d="M19.11 17.37c-.27-.14-1.62-.8-1.87-.89-.25-.09-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.54-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.97 2.64 1.11 2.82c.14.18 1.91 2.91 4.63 4.08.65.28 1.16.45 1.55.58.65.21 1.25.18 1.72.11.52-.08 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32z"></path><path d="M26.7 5.3A13.48 13.48 0 0 0 16 1.5C8.54 1.5 2.5 7.54 2.5 15c0 2.38.62 4.7 1.8 6.74L2.5 30.5l9-1.76A13.43 13.43 0 0 0 16 28.5c7.46 0 13.5-6.04 13.5-13.5 0-3.6-1.4-6.98-2.8-9.7zM16 26.3c-2.03 0-4.02-.55-5.76-1.6l-.41-.24-5.34 1.04 1.01-5.2-.27-.43A11.22 11.22 0 0 1 4.8 15C4.8 8.8 9.8 3.8 16 3.8S27.2 8.8 27.2 15 22.2 26.3 16 26.3z"></path></svg><span>WhatsApp</span></a>
+<a class="chip big" data-link="zalo" href="#"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M12 2C6.48 2 2 6.02 2 10.97c0 2.84 1.47 5.37 3.77 7.03V22l3.66-2.01c.83.2 1.7.31 2.57.31 5.52 0 10-4.02 10-8.97S17.52 2 12 2zm3.73 12.21H8.27v-1.46l5.52-6.3H8.5V5h7.23v1.46l-5.52 6.3h5.52v1.45z"></path></svg><span>Zalo</span></a>
+<a class="chip big" data-link="maps" href="#"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7zm0 9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path></svg><span data-i18n="btn_maps">Maps</span></a>
+</div>
+<div class="small muted" data-i18n="contact_hours">By appointment â€¢ 10:00–22:00 daily</div>
+<div class="small muted" data-i18n="contact_note">Send deposit screenshot after booking to confirm.</div></div>
 
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <div class="brand">
-        <img class="logo" src="signnochainlogo.png" alt="CRYPT-TIC logo">
-        <div class="brand-text">
-          <div class="brand-title">Nha Trang Escape Room</div>
-          <div class="brand-sub">by CRYPT-TIC</div>
-        </div>
-      </div>
-
-      <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">&#9776;</button>
-
-      <nav class="nav" id="site-nav" aria-label="Primary navigation">
-        <a href="#home" data-i18n="nav_home">Home</a>
-        <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
-        <a href="#booking" data-i18n="nav_booking">Booking</a>
-        <a href="#contact" data-i18n="nav_contact">Contact</a>
-        <a href="#location" data-i18n="nav_location">Location</a>
-      </nav>
-
-      <div class="lang-and-mode">
-        <div class="lang">
-          <button class="lang-btn" data-lang="en" type="button">EN</button>
-          <button class="lang-btn" data-lang="vi" type="button">VI</button>
-          <button class="lang-btn" data-lang="ru" type="button">RU</button>
-          <button class="lang-btn" data-lang="ko" type="button">KR</button>
-        </div>
-        <button id="dark-toggle" class="dark-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">Dark</button>
-      </div>
-    </div>
-  </header>
-
-  <main class="wrap">
-    <section id="home" class="hero">
-      <div class="hero-card">
-        <div class="pill" data-i18n="pill">Private bookings â€¢ 60 minutes â€¢ Up to 8 players</div>
-        <h1 data-i18n="hero_title">Nha Trang Escape Room</h1>
-        <p class="lead" data-i18n="hero_lead">Locked in together, your team searches for clues and solves puzzles to escape within 60 minutes. FUN - FOR ALL AGES AND LANGUAGES! MULTIPLE THEMES AVAILABLE!</p>
-
-        <div class="cta-row">
-          <a class="btn primary" href="#booking" data-i18n="cta_book">Book / Ask</a>
-          <a class="btn ghost" href="#details" data-i18n="cta_learn">See how it works</a>
-        </div>
-
-        <div class="quick">
-          <div class="quick-item">
-            <div class="quick-label" data-i18n="quick_hours_label">Hours</div>
-            <div class="quick-value" data-i18n="quick_hours_value">By appointment â€¢ 10am–10pm daily</div>
-          </div>
-
-          <div class="quick-item">
-            <div class="quick-label" data-i18n="quick_phone_label">Fast contact</div>
-            <div class="quick-actions">
-              <a class="chip" href="#" data-link="tel"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z'/></svg><span data-i18n="btn_call">Call</span></a>
-              <a class="chip" href="#" data-link="sms"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M4 4h16a2 2 0 0 1 2 2v13a1 1 0 0 1-1 1H7l-4 3V6a2 2 0 0 1 2-2zm2 5h12v2H6V9zm0 4h9v2H6v-2z'/></svg><span data-i18n="btn_text">Text</span></a>
-              <a class="chip" href="#" data-link="facebook" target="_blank" rel="noopener"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M13.5 21v-7h2.35l.35-2.74H13.5V9.51c0-.79.22-1.33 1.35-1.33h1.45V5.73c-.25-.03-1.1-.1-2.09-.1-2.06 0-3.47 1.26-3.47 3.58v2.05H8.4V14h2.34v7h2.76z'/></svg><span data-i18n="btn_facebook">Facebook</span></a>
-              <a class="chip" href="#" data-link="zalo"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M12 2C6.48 2 2 6.02 2 10.97c0 2.84 1.47 5.37 3.77 7.03V22l3.66-2.01c.83.2 1.7.31 2.57.31 5.52 0 10-4.02 10-8.97S17.52 2 12 2zm3.73 12.21H8.27v-1.46l5.52-6.3H8.5V5h7.23v1.46l-5.52 6.3h5.52v1.45z'/></svg><span>Zalo</span></a>
-              <a class="chip" href="#" data-link="whatsapp"><svg viewBox='0 0 32 32' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M19.11 17.37c-.27-.14-1.62-.8-1.87-.89-.25-.09-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.54-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.97 2.64 1.11 2.82c.14.18 1.91 2.91 4.63 4.08.65.28 1.16.45 1.55.58.65.21 1.25.18 1.72.11.52-.08 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32z'/><path d='M26.7 5.3A13.48 13.48 0 0 0 16 1.5C8.54 1.5 2.5 7.54 2.5 15c0 2.38.62 4.7 1.8 6.74L2.5 30.5l9-1.76A13.43 13.43 0 0 0 16 28.5c7.46 0 13.5-6.04 13.5-13.5 0-3.6-1.4-6.98-2.8-9.7zM16 26.3c-2.03 0-4.02-.55-5.76-1.6l-.41-.24-5.34 1.04 1.01-5.2-.27-.43A11.22 11.22 0 0 1 4.8 15C4.8 8.8 9.8 3.8 16 3.8S27.2 8.8 27.2 15 22.2 26.3 16 26.3z'/></svg><span>WhatsApp</span></a>
-              <a class="chip" href="#" data-link="maps"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7zm0 9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z'/></svg><span data-i18n="btn_maps">Maps</span></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="muted small hint-inline" data-i18n="screenshot_note">After booking, send a screenshot of your payment on Facebook, Zalo, or WhatsApp to approve your time.</div>
-      </div>
-
-      <div class="hero-side">
-        <div class="panel panel-dark hero-story">
-          <h3 data-i18n="side_title">Bring your friends. Beat the clock.</h3>
-          <ul class="bullets">
-            <li data-i18n="b1">Search the room for hidden clues</li>
-            <li data-i18n="b2">Solve puzzles and unlock the next steps</li>
-            <li data-i18n="b3">A fully immersive, mentally challenging experience</li>
-          </ul>
-          <div class="note" data-i18n="side_note">Great for friends, dates, birthdays, work events â€” or a boring Wednesday. Think you can escape? Prove it. Book a slot and beat the room.</div>
-        </div>
-        <div class="heroMedia">
-          <img src="group-photo.jpg" alt="CRYPT-TIC escape room group photo">
-        </div>
-
-      </div>
-    </section>
-
-    <section id="details" class="section">
-      <h2 data-i18n="details_title">How it works</h2>
-      <div class="grid-3">
-        <div class="card">
-          <div class="card-num">01</div>
-          <h3 data-i18n="d1_title">Arrive & get briefed</h3>
-          <p data-i18n="d1_text">We explain rules, safety, and your mission. Then the timer starts.</p>
-        </div>
-        <div class="card">
-          <div class="card-num">02</div>
-          <h3 data-i18n="d2_title">Explore & solve</h3>
-          <p data-i18n="d2_text">Find clues, connect patterns, and unlock progress as a team.</p>
-        </div>
-        <div class="card">
-          <div class="card-num">03</div>
-          <h3 data-i18n="d3_title">Escape in 60 minutes</h3>
-          <p data-i18n="d3_text">Race against time. Communicate. Think fast. Escape.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="section">
-      <h2 data-i18n="pricing_title">Pricing</h2>
-      <div class="pricing-layout">
-        <div class="pricing" style="display:block">
-          <div class="price-card">
-            <img src="pricing-poster.png" alt="Nha Trang Escape Room pricing: 2 players 1,100,000 VND; 3 players 1,350,000 VND; 4–6 players 350,000 VND per person; 7–8 players 2,100,000 VND total" style="display:block;width:100%;height:auto;border-radius:12px" loading="lazy">
-            <table style="width:100%;border-collapse:collapse;margin-top:16px"><thead><tr><th data-i18n="pricing_players">Players</th><th data-i18n="pricing_each">Per person</th><th data-i18n="pricing_total">Total</th></tr></thead><tbody><tr><td style="padding:12px;border-bottom:1px solid #687080">2</td><td style="padding:12px;border-bottom:1px solid #687080">550,000 VND</td><td style="padding:12px;border-bottom:1px solid #687080">1,100,000 VND</td></tr><tr><td style="padding:12px;border-bottom:1px solid #687080">3</td><td style="padding:12px;border-bottom:1px solid #687080">450,000 VND</td><td style="padding:12px;border-bottom:1px solid #687080">1,350,000 VND</td></tr><tr><td style="padding:12px;border-bottom:1px solid #687080">4</td><td style="padding:12px;border-bottom:1px solid #687080">350,000 VND</td><td style="padding:12px;border-bottom:1px solid #687080">1,400,000 VND</td></tr><tr><td style="padding:12px;border-bottom:1px solid #687080">5</td><td style="padding:12px;border-bottom:1px solid #687080">350,000 VND</td><td style="padding:12px;border-bottom:1px solid #687080">1,750,000 VND</td></tr><tr><td style="padding:12px;border-bottom:1px solid #687080">6</td><td style="padding:12px;border-bottom:1px solid #687080">350,000 VND</td><td style="padding:12px;border-bottom:1px solid #687080">2,100,000 VND</td></tr><tr><td style="padding:12px;border-bottom:1px solid #687080">7</td><td style="padding:12px;border-bottom:1px solid #687080">300,000 VND</td><td style="padding:12px;border-bottom:1px solid #687080">2,100,000 VND</td></tr><tr><td style="padding:12px;border-bottom:1px solid #687080">8</td><td style="padding:12px;border-bottom:1px solid #687080">262,500 VND</td><td style="padding:12px;border-bottom:1px solid #687080">2,100,000 VND</td></tr></tbody></table>
-            <p data-i18n="price_deposit">Deposit minimum: 350.000đ to hold any booking</p>
-            <p data-i18n="price_hours">Hours: 10:00–22:00 daily (last start 21:00)</p>
-            <a class="btn primary full" href="#" id="book-now" data-i18n="cta_booknow">Book now</a>
-          </div>
-        </div>
-        <div class="card pricing-social">
-          <div class="pricing-social-head">
-            <p class="mapEyebrow" data-i18n="fb_eyebrow">Latest on Facebook</p>
-            <h3 data-i18n="fb_title">See our newest updates</h3>
-            <p class="muted" data-i18n="fb_text">This window loads the latest public posts from our Facebook page when the website opens.</p>
-          </div>
-          <div class="facebookEmbedWrap pricingFacebookWrap" id="facebookEmbedWrap" data-embed-state="loading">
-            <div class="embed-status" id="facebookEmbedStatus" data-i18n="fb_status_loading">Loading public Facebook updates...</div>
-            <iframe
-              id="facebookPageFrame"
-              class="facebookEmbed"
-              title="CRYPT-TIC Escape Rooms Facebook updates"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              src="about:blank"></iframe>
-          </div>
-          <p class="small muted embed-note" data-i18n="fb_fallback">If Facebook does not load inside your browser, use the button below to open our page directly.</p>
-          <a class="btn ghost full" href="#" data-link="facebook" target="_blank" rel="noopener" data-i18n="fb_cta">Open Facebook</a>
-      </div>
-      </div>
-    </section>
-
-    <section id="booking" class="section">
-      <h2 data-i18n="booking_title">Booking</h2>
-      <div class="contact compact">
-        <div class="card">
-          <h3 data-i18n="booking_calendar_title">Choose a time</h3>
-<p class="muted" style="margin-top:10px" data-i18n="booking_calendar_text">Pick a slot (10:00–22:00). Last start 21:00. Request pending until confirmed.</p>
-          <div class="divider" style="margin-top:14px"></div>
-          <a class="btn primary full booking-open-top" href="#" id="openBookingBtn" target="_blank" rel="noopener" data-i18n="booking_open">Open booking form</a>
-
-
-          
-
-          
-
-          <div class="paycalc" aria-label="Price calculator" style="margin-top:14px;">
-                  <div class="paycalc-top">
-                    <div class="paycalc-title" id="calcTitle">Players & price</div>
-                    <div class="paycalc-select">
-                      <label for="calcPlayers" class="sr-only" id="calcPlayersLabel">Players</label>
-                      <select id="calcPlayers" aria-label="Players"></select>
-                    </div>
-                  </div>
-                  <div class="paycalc-lines">
-                    <div class="paycalc-line"><span id="calcPrepayLabel">Prepay (VietQR)</span><strong id="calcPrepay">â€”</strong></div>
-                    <div class="paycalc-line muted"><span id="calcArrivalLabel">Pay on arrival</span><strong id="calcArrival">â€”</strong></div>
-                    <div class="paycalc-line"><span id="calcDepositLabel">Deposit only</span><strong id="calcDeposit">â€”</strong></div>
-                  </div>
-                  <div class="muted small" id="calcNote">Minimum charge applies (4 players). VietQR prepay is cheaper.</div>
-                </div>
-
-<div class="booking-actions" style="margin-top:14px">
-            <a class="chip" href="#" data-link="tel"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z'/></svg><span data-i18n="btn_call">Call</span></a>
-            <a class="chip" href="#" data-link="sms"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M4 4h16a2 2 0 0 1 2 2v13a1 1 0 0 1-1 1H7l-4 3V6a2 2 0 0 1 2-2zm2 5h12v2H6V9zm0 4h9v2H6v-2z'/></svg><span data-i18n="btn_text">Text</span></a>
-            <a class="chip" href="#" data-link="facebook" target="_blank" rel="noopener"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M13.5 21v-7h2.35l.35-2.74H13.5V9.51c0-.79.22-1.33 1.35-1.33h1.45V5.73c-.25-.03-1.1-.1-2.09-.1-2.06 0-3.47 1.26-3.47 3.58v2.05H8.4V14h2.34v7h2.76z'/></svg><span data-i18n="btn_facebook">Facebook</span></a>
-            <a class="chip" href="#" data-link="zalo"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M12 2C6.48 2 2 6.02 2 10.97c0 2.84 1.47 5.37 3.77 7.03V22l3.66-2.01c.83.2 1.7.31 2.57.31 5.52 0 10-4.02 10-8.97S17.52 2 12 2zm3.73 12.21H8.27v-1.46l5.52-6.3H8.5V5h7.23v1.46l-5.52 6.3h5.52v1.45z'/></svg><span>Zalo</span></a>
-            <a class="chip" href="#" data-link="whatsapp"><svg viewBox='0 0 32 32' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M19.11 17.37c-.27-.14-1.62-.8-1.87-.89-.25-.09-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.54-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.97 2.64 1.11 2.82c.14.18 1.91 2.91 4.63 4.08.65.28 1.16.45 1.55.58.65.21 1.25.18 1.72.11.52-.08 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32z'/><path d='M26.7 5.3A13.48 13.48 0 0 0 16 1.5C8.54 1.5 2.5 7.54 2.5 15c0 2.38.62 4.7 1.8 6.74L2.5 30.5l9-1.76A13.43 13.43 0 0 0 16 28.5c7.46 0 13.5-6.04 13.5-13.5 0-3.6-1.4-6.98-2.8-9.7zM16 26.3c-2.03 0-4.02-.55-5.76-1.6l-.41-.24-5.34 1.04 1.01-5.2-.27-.43A11.22 11.22 0 0 1 4.8 15C4.8 8.8 9.8 3.8 16 3.8S27.2 8.8 27.2 15 22.2 26.3 16 26.3z'/></svg><span>WhatsApp</span></a>
-          </div>
-
-          <!-- Duplicate booking CTA removed: keep only the TOP Open booking form button -->
-        </div>
-
-        <div class="card">
-          <h3 data-i18n="booking_deposit_title">Deposit (VietQR)</h3>
-          <p class="muted" data-i18n="booking_deposit_text">Minimum deposit 350.000Ä‘ (~$14) to hold. Full prepay optional.</p>
-                    <div class="paycard">
-            <div class="paycard-head">
-              <div class="paycard-logos" aria-hidden="true">
-                <span class="logo-chip vietqr">VietQR</span>
-                <span class="logo-chip vietpay">VietPay</span>
-              </div>
-              <div class="paycard-note" data-i18n="pay_note">Open your banking app â†’ Scan to pay</div>
-            </div>
-
-            <div class="paycard-body">
-              <div class="paycard-qr">
-                <img id="vietqr" src="" alt="VietQR payment QR" class="qr-code" loading="lazy">
-              </div>
-
-              <div class="paycard-info">
-                <div class="payrow">
-                  <div class="k" data-i18n="pay_name_label">Name</div>
-                  <div class="v">Nha Trang Escape Room</div>
-                </div>
-                <div class="payrow">
-                  <div class="k" data-i18n="pay_account_label">Account</div>
-                  <div class="v">1064551196</div>
-                  <button class="copy" data-copy="1064551196" type="button" aria-label="Copy account" data-i18n="copy_btn">Copy</button>
-                </div>
-
-
-                <a id="open-vietqr" class="btn ghost full" href="#" target="_blank" rel="noopener" data-i18n="booking_open_vietqr">Open VietQR</a>
-                <a id="pay-card" class="btn ghost full" href="#" target="_blank" rel="noopener" data-i18n="pay_card">Pay by card (PayPal)</a>
-                <div class="muted small" data-i18n="pay_tip">Tip: after paying, send a screenshot on Facebook, Zalo, or WhatsApp so we can approve your booking.</div>
-              </div>
-            </div>
-          </div>
-          <ul class="checklist">
-            <li data-i18n="booking_step1">Scan QR â†’ pay deposit</li>
-            <li data-i18n="booking_step2">Send screenshot (Facebook/Zalo/WhatsApp)</li>
-            <li data-i18n="booking_step3">We confirm your time</li>
-          </ul>
-          <div class="muted small" data-i18n="booking_email_note">Optional: add email in the booking form to receive approval updates.</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2 data-i18n="contact_title">Contact</h2>
-      <div class="contact compact">
-        <div class="card">
-          <h3 data-i18n="contact_book">Contact & reservations</h3>
-          <p class="muted" data-i18n="contact_text">Message on Facebook or call/text to reserve. After paying deposit, send a screenshot to confirm.</p>
-
-          <div class="social-buttons">
-            <a class="chip big" href="#" data-link="facebook" target="_blank" rel="noopener"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M13.5 21v-7h2.35l.35-2.74H13.5V9.51c0-.79.22-1.33 1.35-1.33h1.45V5.73c-.25-.03-1.1-.1-2.09-.1-2.06 0-3.47 1.26-3.47 3.58v2.05H8.4V14h2.34v7h2.76z'/></svg><span data-i18n="btn_facebook">Facebook</span></a>
-            <a class="chip big" href="#" data-link="tel"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z'/></svg><span data-i18n="btn_call">Call</span></a>
-            <a class="chip big" href="#" data-link="sms"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M4 4h16a2 2 0 0 1 2 2v13a1 1 0 0 1-1 1H7l-4 3V6a2 2 0 0 1 2-2zm2 5h12v2H6V9zm0 4h9v2H6v-2z'/></svg><span data-i18n="btn_text">Text</span></a>
-            <a class="chip big" href="#" data-link="whatsapp"><svg viewBox='0 0 32 32' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M19.11 17.37c-.27-.14-1.62-.8-1.87-.89-.25-.09-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.54-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.97 2.64 1.11 2.82c.14.18 1.91 2.91 4.63 4.08.65.28 1.16.45 1.55.58.65.21 1.25.18 1.72.11.52-.08 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.11-.25-.18-.52-.32z'/><path d='M26.7 5.3A13.48 13.48 0 0 0 16 1.5C8.54 1.5 2.5 7.54 2.5 15c0 2.38.62 4.7 1.8 6.74L2.5 30.5l9-1.76A13.43 13.43 0 0 0 16 28.5c7.46 0 13.5-6.04 13.5-13.5 0-3.6-1.4-6.98-2.8-9.7zM16 26.3c-2.03 0-4.02-.55-5.76-1.6l-.41-.24-5.34 1.04 1.01-5.2-.27-.43A11.22 11.22 0 0 1 4.8 15C4.8 8.8 9.8 3.8 16 3.8S27.2 8.8 27.2 15 22.2 26.3 16 26.3z'/></svg><span>WhatsApp</span></a>
-            <a class="chip big" href="#" data-link="zalo"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M12 2C6.48 2 2 6.02 2 10.97c0 2.84 1.47 5.37 3.77 7.03V22l3.66-2.01c.83.2 1.7.31 2.57.31 5.52 0 10-4.02 10-8.97S17.52 2 12 2zm3.73 12.21H8.27v-1.46l5.52-6.3H8.5V5h7.23v1.46l-5.52 6.3h5.52v1.45z'/></svg><span>Zalo</span></a>
-            <a class="chip big" href="#" data-link="maps"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7zm0 9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z'/></svg><span data-i18n="btn_maps">Maps</span></a>
-          </div>
-
-          <div class="small muted" data-i18n="contact_hours">By appointment â€¢ 10:00–22:00 daily</div>
-        </div>
-
-        <div class="card">
-          <h3 data-i18n="contact_location_title">Location</h3>
-          <p class="muted" data-i18n="contact_location_text">Escape Room Nha Trang</p>
-          <p class="locationAddress">STH32B.15, &#273;&#432;&#7901;ng 35, khu &#273;&ocirc; th&#7883; L&ecirc;, Nam Nha Trang, Kh&aacute;nh H&ograve;a 57136, Nha Trang, Kh&aacute;nh H&ograve;a 650000<br>65HH+4V Nam Nha Trang, Khanh Hoa, Vietnam</p>
-          <div class="divider"></div>
-          <a class="btn ghost full" href="#" data-link="maps" data-i18n="open_maps">Open in Google Maps</a>
-          <div class="divider"></div>
-          <div class="small muted" data-i18n="contact_note">Send deposit screenshot after booking to confirm.</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="location" class="section mapSection">
-      <div class="mapCard">
-        <div class="mapCopy">
-          <p class="mapEyebrow" data-i18n="map_eyebrow">Find Us</p>
-          <h2 data-i18n="map_title">Easy to find, easy to share</h2>
-          <p class="muted" data-i18n="map_text">Use the map below for directions or send the exact address to your group before the booking starts.</p>
-          <p class="locationAddress">STH32B.15, &#273;&#432;&#7901;ng 35, khu &#273;&ocirc; th&#7883; L&ecirc;, Nam Nha Trang, Kh&aacute;nh H&ograve;a 57136, Nha Trang, Kh&aacute;nh H&ograve;a 650000<br>65HH+4V Nam Nha Trang, Khanh Hoa, Vietnam</p>
-          <div class="cta-row">
-            <a class="btn primary" href="#" data-link="maps" data-i18n="map_cta">Get directions</a>
-          </div>
-          <p class="small muted embed-note" data-i18n="map_fallback">If the map does not load in your browser, use Get directions to open Google Maps directly.</p>
-        </div>
-        <div class="mapFrameWrap" id="mapFrameWrap" data-embed-state="loading">
-          <div class="embed-status" id="mapEmbedStatus" data-i18n="map_status_loading">Loading map...</div>
-          <iframe
-            id="mapFrame"
-            class="mapFrame"
-            title="Nha Trang Escape Room map"
-            loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            src="about:blank"
-            data-src="https://www.google.com/maps?q=Escape%20Room%20Nha%20Trang%2C%20STH32B.15%2C%20%C4%91%C6%B0%E1%BB%9Dng%2035%2C%20khu%20%C4%91%C3%B4%20th%E1%BB%8B%20L%C3%AA%2C%20Nam%20Nha%20Trang%2C%20Kh%C3%A1nh%20H%C3%B2a%2057136%2C%20Nha%20Trang%2C%20Kh%C3%A1nh%20H%C3%B2a%20650000%2C%2065HH%2B4V%20Nam%20Nha%20Trang%2C%20Khanh%20Hoa%2C%20Vietnam&amp;output=embed"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-brand">
-        <div class="footer-logoPlate" aria-hidden="true">
-          <img class="footer-logo" id="footerLogo" alt="CRYPT-TIC logo" loading="lazy"/>
-          <span class="footer-logoFallback" id="footerLogoFallback">CT</span>
-        </div>
-        <div class="footer-brandCopy">
-          <div class="footer-brandTitle">2026 CRYPT-TIC Escape Rooms</div>
-          <div class="muted small">Escape Room Nha Trang</div>
-        </div>
-      </div>
-      <div class="footer-links">
-        <a class="chip" href="#" data-link="tel"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z'/></svg><span data-i18n="btn_call">Call</span></a>
-        <a class="chip" href="#" data-link="facebook" target="_blank" rel="noopener"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M13.5 21v-7h2.35l.35-2.74H13.5V9.51c0-.79.22-1.33 1.35-1.33h1.45V5.73c-.25-.03-1.1-.1-2.09-.1-2.06 0-3.47 1.26-3.47 3.58v2.05H8.4V14h2.34v7h2.76z'/></svg><span data-i18n="btn_facebook">Facebook</span></a>
-        <a class="chip" href="#" data-link="maps"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7zm0 9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z'/></svg><span data-i18n="btn_maps">Maps</span></a>
-      </div>
-    </footer>
-  </main>
-
-  <script src="app.js?v=20261021-pricing"></script>
+</div>
+</section>
+<section class="section mapSection" id="location">
+<div class="mapCard">
+<div class="mapCopy">
+<p class="mapEyebrow" data-i18n="map_eyebrow">Find Us</p>
+<h2 data-i18n="map_title">Easy to find, easy to share</h2>
+<p class="muted" data-i18n="map_text">Use the map below for directions or send the exact address to your group before the booking starts.</p>
+<p class="locationAddress">STH32B.15, đường 35, khu đô thị Lê, Nam Nha Trang, Khánh Hòa 57136, Nha Trang, Khánh Hòa 650000<br/>65HH+4V Nam Nha Trang, Khanh Hoa, Vietnam</p>
+<div class="cta-row">
+<a class="btn primary" data-i18n="map_cta" data-link="maps" href="#">Get directions</a>
+</div>
+<p class="small muted embed-note" data-i18n="map_fallback">If the map does not load in your browser, use Get directions to open Google Maps directly.</p>
+</div>
+<div class="mapFrameWrap" data-embed-state="loading" id="mapFrameWrap">
+<div class="embed-status" data-i18n="map_status_loading" id="mapEmbedStatus">Loading map...</div>
+<iframe allowfullscreen="" class="mapFrame" data-src="https://www.google.com/maps?q=Escape%20Room%20Nha%20Trang%2C%20STH32B.15%2C%20%C4%91%C6%B0%E1%BB%9Dng%2035%2C%20khu%20%C4%91%C3%B4%20th%E1%BB%8B%20L%C3%AA%2C%20Nam%20Nha%20Trang%2C%20Kh%C3%A1nh%20H%C3%B2a%2057136%2C%20Nha%20Trang%2C%20Kh%C3%A1nh%20H%C3%B2a%20650000%2C%2065HH%2B4V%20Nam%20Nha%20Trang%2C%20Khanh%20Hoa%2C%20Vietnam&amp;output=embed" id="mapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="about:blank" title="Nha Trang Escape Room map"></iframe>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="footer-brand">
+<div aria-hidden="true" class="footer-logoPlate">
+<img alt="CRYPT-TIC logo" class="footer-logo" id="footerLogo" loading="lazy"/>
+<span class="footer-logoFallback" id="footerLogoFallback">CT</span>
+</div>
+<div class="footer-brandCopy">
+<div class="footer-brandTitle">2026 CRYPT-TIC Escape Rooms</div>
+<div class="muted small">Escape Room Nha Trang</div>
+</div>
+</div>
+<div class="footer-links">
+<a class="chip" data-link="tel" href="#"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"></path></svg><span data-i18n="btn_call">Call</span></a>
+<a class="chip" data-link="facebook" href="#" rel="noopener" target="_blank"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M13.5 21v-7h2.35l.35-2.74H13.5V9.51c0-.79.22-1.33 1.35-1.33h1.45V5.73c-.25-.03-1.1-.1-2.09-.1-2.06 0-3.47 1.26-3.47 3.58v2.05H8.4V14h2.34v7h2.76z"></path></svg><span data-i18n="btn_facebook">Facebook</span></a>
+<a class="chip" data-link="maps" href="#"><svg aria-hidden="true" fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7zm0 9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path></svg><span data-i18n="btn_maps">Maps</span></a>
+</div>
+</footer>
+</main>
+<script src="app.js?v=20261021-clean"></script>
 </body>
 </html>
-
-
-

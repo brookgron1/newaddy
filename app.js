@@ -435,6 +435,9 @@ Object.keys(i18n).forEach(lang => {
   Object.assign(i18n[lang], {pricing_players:labels[0],pricing_each:labels[1],pricing_total:labels[2],calc_note_min:labels[3],calc_note_prepay:labels[3],price_save:labels[3],price_min_charge:"2: 1,100,000 VND · 3: 1,350,000 VND",price_max:"7–8: 2,100,000 VND"});
 });
 
+const facebookCopy = {en:"Photos, news, and recent updates from our escape room.",vi:"Hình ảnh, tin tức và cập nhật mới từ phòng thoát hiểm của chúng tôi.",ru:"Фотографии, новости и свежие события нашего квеста.",ko:"방탈출의 사진과 최신 소식을 확인하세요."};
+Object.keys(facebookCopy).forEach(lang => i18n[lang].fb_clean_text = facebookCopy[lang]);
+
 let CURRENT_LANG = "en";
 
 function formatTemplate(text, vars){
@@ -536,45 +539,8 @@ function watchEmbed(iframe, wrapperId, loadingKey, fallbackKey, timeoutMs){
   }, timeoutMs || 5000);
 }
 
-function syncFacebookPageEmbed(){
-  const facebookFrame = document.getElementById("facebookPageFrame");
-  if (!facebookFrame) return;
-
-  const pageUrl = SITE_LINKS.facebook || "";
-  if (!pageUrl){
-    facebookFrame.setAttribute("src", "about:blank");
-    setEmbedState("facebookEmbedWrap", "fallback", "fb_status_fallback");
-    return;
-  }
-
-  const height = window.innerWidth <= 640 ? "540" : "620";
-  const params = new URLSearchParams({
-    href: pageUrl,
-    tabs: "timeline",
-    width: "500",
-    height,
-    small_header: "false",
-    adapt_container_width: "true",
-    hide_cover: "false",
-    show_facepile: "false"
-  });
-  const nextSrc = `https://www.facebook.com/plugins/page.php?${params.toString()}`;
-  const currentSrc = facebookFrame.getAttribute("src") || "";
-
-  if (currentSrc !== nextSrc){
-    watchEmbed(facebookFrame, "facebookEmbedWrap", "fb_status_loading", "fb_status_fallback", 5500);
-    facebookFrame.setAttribute("src", nextSrc);
-    return;
-  }
-
-  if (currentSrc && currentSrc !== "about:blank"){
-    const wrapper = document.getElementById("facebookEmbedWrap");
-    if (wrapper){
-      clearEmbedTimer(wrapper);
-      wrapper.dataset.embedState = "ready";
-    }
-  }
-}
+// Facebook opens directly: cross-site previews can be blocked by visitors' browsers.
+function syncFacebookPageEmbed(){ return; }
 
 function syncMapEmbed(){
   const mapFrame = document.getElementById("mapFrame");
@@ -962,4 +928,5 @@ window.addEventListener('resize', ()=>{
     syncFacebookPageEmbed();
   }, 150);
 });
+
 
