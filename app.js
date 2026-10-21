@@ -428,6 +428,13 @@ Object.assign(i18n.ko, {
   map_fallback:"Beuraujeoeseo jidoga yeolliji anhneun gyeongu, Get directionsreul nulleo Google Mapsreul jikjeop yeoseyo."
 });
 
+const GROUP_TOTALS = {2:1100000,3:1350000,4:1400000,5:1750000,6:2100000,7:2100000,8:2100000};
+const pricingLabels = {en:["Players","Per person","Total","Prices match the group pricing above."],vi:["Số người","Giá mỗi người","Tổng tiền","Giá theo bảng giá nhóm ở trên."],ru:["Игроки","С человека","Итого","Цены соответствуют таблице выше."],ko:["인원","1인 가격","합계","위 단체 요금표와 동일한 가격입니다."]};
+Object.keys(i18n).forEach(lang => {
+  const labels = pricingLabels[lang];
+  Object.assign(i18n[lang], {pricing_players:labels[0],pricing_each:labels[1],pricing_total:labels[2],calc_note_min:labels[3],calc_note_prepay:labels[3],price_save:labels[3],price_min_charge:"2: 1,100,000 VND · 3: 1,350,000 VND",price_max:"7–8: 2,100,000 VND"});
+});
+
 let CURRENT_LANG = "en";
 
 function formatTemplate(text, vars){
@@ -678,10 +685,10 @@ function toggleDark(){
 
 
 // Pricing calculator (website)
-const PRICE_ARRIVAL_PER_PERSON = 400000; // VND (cash at door)
+const PRICE_ARRIVAL_PER_PERSON = 350000; // VND (cash at door)
 const PRICE_VIETQR_PREPAY_PER_PERSON = 350000; // VND
 const DEPOSIT_ONLY_VND = 350000; // VND
-const MIN_CHARGE_PLAYERS = 4;
+const MIN_CHARGE_PLAYERS = 2;
 const USD_PER_VND = 1 / 25000;
 
 function safeNumber(n){
@@ -740,7 +747,7 @@ function initPriceCalculator(){
 
     if (v === "deposit"){
       prepayEl.textContent = formatMoney(DEPOSIT_ONLY_VND);
-      arrivalEl.textContent = formatMoney(PRICE_ARRIVAL_PER_PERSON * MIN_CHARGE_PLAYERS);
+      arrivalEl.textContent = "—";
       depEl.textContent = formatMoney(DEPOSIT_ONLY_VND);
       if (noteEl) noteEl.textContent = `Deposit holds your slot. Final amount paid on arrival.`;
       return;
@@ -748,8 +755,8 @@ function initPriceCalculator(){
 
     const players = Math.max(0, safeNumber(parseInt(v,10)));
     const charged = Math.max(players, MIN_CHARGE_PLAYERS);
-    prepayEl.textContent = formatMoney(PRICE_VIETQR_PREPAY_PER_PERSON * charged);
-    arrivalEl.textContent = formatMoney(PRICE_ARRIVAL_PER_PERSON * charged);
+    prepayEl.textContent = formatMoney(GROUP_TOTALS[players]);
+    arrivalEl.textContent = formatMoney(GROUP_TOTALS[players]);
     depEl.textContent = formatMoney(DEPOSIT_ONLY_VND);
     if (noteEl){
       noteEl.textContent = players < MIN_CHARGE_PLAYERS ? `Minimum charge applies (${MIN_CHARGE_PLAYERS} players). VietQR prepay is cheaper.` : `VietQR prepay is cheaper.`;
@@ -841,7 +848,7 @@ function renderPriceCalculator(){
 
   if (value === "deposit"){
     prepayEl.textContent = formatMoney(DEPOSIT_ONLY_VND);
-    arrivalEl.textContent = formatMoney(PRICE_ARRIVAL_PER_PERSON * MIN_CHARGE_PLAYERS);
+    arrivalEl.textContent = "—";
     depEl.textContent = formatMoney(DEPOSIT_ONLY_VND);
     if (noteEl) noteEl.textContent = t("calc_note_deposit");
     return;
@@ -849,8 +856,8 @@ function renderPriceCalculator(){
 
   const players = Math.max(0, safeNumber(parseInt(value, 10)));
   const charged = Math.max(players, MIN_CHARGE_PLAYERS);
-  prepayEl.textContent = formatMoney(PRICE_VIETQR_PREPAY_PER_PERSON * charged);
-  arrivalEl.textContent = formatMoney(PRICE_ARRIVAL_PER_PERSON * charged);
+  prepayEl.textContent = formatMoney(GROUP_TOTALS[players]);
+  arrivalEl.textContent = formatMoney(GROUP_TOTALS[players]);
   depEl.textContent = formatMoney(DEPOSIT_ONLY_VND);
   if (noteEl){
     noteEl.textContent = players < MIN_CHARGE_PLAYERS
@@ -955,3 +962,4 @@ window.addEventListener('resize', ()=>{
     syncFacebookPageEmbed();
   }, 150);
 });
+
