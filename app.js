@@ -438,6 +438,18 @@ Object.keys(i18n).forEach(lang => {
 const facebookCopy = {en:"Photos, news, and recent updates from our escape room.",vi:"Hình ảnh, tin tức và cập nhật mới từ phòng thoát hiểm của chúng tôi.",ru:"Фотографии, новости и свежие события нашего квеста.",ko:"방탈출의 사진과 최신 소식을 확인하세요."};
 Object.keys(facebookCopy).forEach(lang => i18n[lang].fb_clean_text = facebookCopy[lang]);
 
+const reopeningCopy = {
+en:["Bookings are available November 25 onward (Vietnam time). Call or message us to confirm your time before paying a deposit.","Confirm your time with us before paying. Then send your payment screenshot via Facebook, Zalo, or WhatsApp."],
+vi:["Có thể đặt lịch từ ngày 25/11 (giờ Việt Nam). Hãy gọi hoặc nhắn tin để xác nhận giờ trước khi đặt cọc.","Xác nhận giờ với chúng tôi trước khi đặt cọc. Sau đó gửi ảnh chụp thanh toán qua Facebook, Zalo hoặc WhatsApp."],
+ru:["Бронирование доступно с 25 ноября по времени Вьетнама. Позвоните или напишите нам, чтобы подтвердить время до внесения депозита.","Сначала подтвердите время у нас, затем внесите депозит и отправьте скриншот оплаты через Facebook, Zalo или WhatsApp."],
+ko:["베트남 시간 기준 11월 25일부터 예약 가능합니다. 예약금을 내기 전에 전화나 메시지로 시간을 확인해 주세요.","시간을 먼저 확인한 뒤 예약금을 결제하고 Facebook, Zalo 또는 WhatsApp으로 결제 화면을 보내 주세요."]
+};
+Object.entries(reopeningCopy).forEach(([lang,[notice,payment]])=>{
+  const dict=i18n[lang];
+  dict.booking_calendar_text=notice+" "+dict.booking_calendar_text;
+  for(const key of ["pay_tip","screenshot_note","contact_text","contact_note","booking_step1"]) dict[key]=payment;
+});
+
 let CURRENT_LANG = "en";
 
 function formatTemplate(text, vars){
